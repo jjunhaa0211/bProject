@@ -11,5 +11,14 @@ public class PasswordValidatorTest {
     void validatePasswordTest() {
         assertThatCode(() -> Passwordvalidate.validate("serverwizard"))
                 .doesNotThrowAnyException();
+        //assertThatCode는 코드 가독성 즉 어떤것이 안됬을 때의 경우를 처리한다
+    }
+
+    @DisplayName("비밀번호가 8자 미만 또는 12자 초과하는 경우 IllegalArgumentException 예외가 발생한다")
+    @Test
+    void validatePasswordTest2() {
+        assertThatCode(() -> Passwordvalidate.validate("aabb"))
+                .isInstanceOf(IllegalArgumentException.class)
+                .hasMessage("비밀번호는 최소 8자 이상 12자 이하여야한다.");
     }
 }
