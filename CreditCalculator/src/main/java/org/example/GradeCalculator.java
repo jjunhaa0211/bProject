@@ -3,23 +3,17 @@ package org.example;
 import java.util.List;
 
 public class GradeCalculator {
-
-    private final List<Course> coures;
+    private final Courses courses;
 
     public GradeCalculator(List<Course> courses) {
-        this.coures = courses;
+        this.courses = new Courses(courses);
     }
 
     public double calculateGrade() {
-        double multipliedCreditAndCourseGrade = 0;
-        for(Course course: coures) {
-          multipliedCreditAndCourseGrade += course.multiplyCreditAndCourseGrade();
-        }
+       double totalMultipliedCreditAndCourseGrade = courses.multiplieditAdnCourseGrade();
 
-        int totalCompletedCredit = coures.stream()
-                .mapToInt(Course::getCredit)
-                .sum();
+       int totalCompletedCredit = courses.calculateToTatalCompletedCredit();
 
-        return multipliedCreditAndCourseGrade / totalCompletedCredit;
+        return totalMultipliedCreditAndCourseGrade / totalCompletedCredit;
     }
 }
