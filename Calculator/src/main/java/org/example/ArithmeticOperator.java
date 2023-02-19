@@ -4,7 +4,6 @@ import java.util.Arrays;
 
 public enum ArithmeticOperator {
     ADDIRION("+") {
-
         @Override
         public int arithemticCalculate(int operand1, int operand2) {
             return operand1 + operand2;
