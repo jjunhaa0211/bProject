@@ -1,6 +1,6 @@
 package org.example;
 
-public class Passwordvalidate {
+public class PasswordValidate {
 
     private static final String WRONG_PASSWORD_LENGTH_EXCEPTION_MESSAGE = "비밀번호는 최소 8자리이상 12자리 이하여야합니다.";
 

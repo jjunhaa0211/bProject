@@ -11,7 +11,7 @@ public class PasswordValidatorTest {
     @DisplayName("비밀번호가 최소 8자 이상, 최대 12자 이하면 예외가 발생하지 않는다.") //해당 테스트코드의 의로를 적어둠
     @Test
     void validatePasswordTest() {
-        assertThatCode(() -> Passwordvalidate.validate("serverwizard"))
+        assertThatCode(() -> PasswordValidate.validate("serverwizard"))
                 .doesNotThrowAnyException();
         //assertThatCode는 코드 가독성 즉 어떤것이 안됬을 때의 경우를 처리한다
     }
@@ -20,7 +20,7 @@ public class PasswordValidatorTest {
     @ParameterizedTest
     @ValueSource(strings = {"aabbcce", "aabbccddeeffg"})
     void validatePasswordTest2(String password) {
-        assertThatCode(() -> Passwordvalidate.validate(password))
+        assertThatCode(() -> PasswordValidate.validate(password))
                 .isInstanceOf(IllegalArgumentException.class)
                 .hasMessage("비밀번호는 최소 8자 이상 12자 이하여야한다.");
     }

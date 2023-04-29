@@ -35,6 +35,7 @@ public enum ArithmeticOperator {
 
     public static int calculate(int operand1, String operand, int operand2) {
         ArithmeticOperator arithmeticOperator = Arrays.stream(values())
+                .parallel()
                 .filter(v -> v.operator.equals(operand))
                 .findFirst()
                 .orElseThrow(() -> new IllegalArgumentException("올바르지 않은 사칙연산입니다"));
