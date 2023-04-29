@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.example.CourseTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-02-16T11:34:58" hostname="Junha.local" time="0.062">
+  <properties/>
+  <testcase name="과목을 생성한다" classname="org.example.CourseTest" time="0.062"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
